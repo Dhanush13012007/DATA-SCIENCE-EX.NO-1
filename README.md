@@ -21,9 +21,9 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output:
-
-SAMPLEIDS.csv
 ```
+SAMPLEIDS.csv
+
 import pandas as pd
 df= pd.read_csv("SAMPLEIDS.csv")
 df
@@ -55,9 +55,9 @@ df.fillna (method = 'bfill')
 <img width="830" height="520" alt="Screenshot 2026-05-22 205816" src="https://github.com/user-attachments/assets/34f9e097-a238-4259-9957-fff346c6b1e6" />
 <img width="777" height="525" alt="Screenshot 2026-05-22 205823" src="https://github.com/user-attachments/assets/f7adf885-af6b-4ddf-961d-8c6798253959" />
 
-
+```
 Loan_data.csv
-'''
+
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -141,9 +141,9 @@ print(df_z_cleaned,"\n")
 <img width="567" height="618" alt="Screenshot 2026-05-22 211929" src="https://github.com/user-attachments/assets/45b9fe38-4bf2-4f2d-a728-8eda528cf5f3" />
 <img width="353" height="479" alt="Screenshot 2026-05-22 212104" src="https://github.com/user-attachments/assets/faf54500-41e2-4c4e-8546-1275a5ce0acc" />
 
-
-Data_set.csv
 ```
+Data_set.csv
+
 
 
 import pandas as pd
@@ -235,9 +235,9 @@ print(df_z_cleaned,"\n")
 <img width="631" height="655" alt="Screenshot 2026-05-22 212932" src="https://github.com/user-attachments/assets/9e5b1545-59d5-4516-b587-90011dc6e2eb" />
 <img width="404" height="450" alt="Screenshot 2026-05-22 212956" src="https://github.com/user-attachments/assets/66ae7854-f3a0-4b12-9114-7a7d0d6dcf71" />
 
-
-heights.csv
 ```
+heights.csv
+
 
 import pandas as pd
 import numpy as np
@@ -315,9 +315,9 @@ print(df_z_cleaned,"\n")
 <img width="298" height="267" alt="Screenshot 2026-05-22 214102" src="https://github.com/user-attachments/assets/0be20b9b-21ed-4bbe-bbc2-20fc5e4ddeab" />
 <img width="364" height="769" alt="Screenshot 2026-05-22 214140" src="https://github.com/user-attachments/assets/0b9dffed-959f-442c-8400-43d537e6712b" />
 
-
-iris.csv
 ```
+iris.csv
+
 
 import pandas as pd
 import numpy as np
