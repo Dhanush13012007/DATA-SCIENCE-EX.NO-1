@@ -21,48 +21,43 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output:
-```
-SAMPLEIDS.csv
 
+SAMPLEIDS.csv
+```
 import pandas as pd
 df= pd.read_csv("SAMPLEIDS.csv")
 df
-```
-<img width="820" height="521" alt="image" src="https://github.com/user-attachments/assets/4359db11-031f-4bf9-8e5c-a7693a261328" />
 
-```
 df.head()
 df.tail()
 
-```
-<img width="776" height="145" alt="image" src="https://github.com/user-attachments/assets/3ad6604f-3126-439d-b2af-81654da3aa15" />
-<img width="934" height="185" alt="image" src="https://github.com/user-attachments/assets/5a46534b-16ae-4ce6-9dc2-dc66b79645e1" />
-
-```
 df.isnull()
 df.notnull()
 df.isnull().sum()
 df.isnull().any()
-```
-<img width="747" height="526" alt="Screenshot 2026-05-22 205318" src="https://github.com/user-attachments/assets/560f3466-8f3d-440e-99d5-14663ec814f2" />
-<img width="708" height="531" alt="Screenshot 2026-05-22 205330" src="https://github.com/user-attachments/assets/79fed8a3-f9b5-4d12-98ed-16a29b67974c" />
-<img width="387" height="508" alt="Screenshot 2026-05-22 205342" src="https://github.com/user-attachments/assets/fd4fa049-9618-4bee-901f-d87445b77282" />
-```
+
 df.dropna()
 df.dropna(axis = 1)
 df.fillna(0)
 df.fillna (method = 'ffill')
 df.fillna (method = 'bfill')
 ```
+
+<img width="820" height="521" alt="image" src="https://github.com/user-attachments/assets/4359db11-031f-4bf9-8e5c-a7693a261328" />
+<img width="776" height="145" alt="image" src="https://github.com/user-attachments/assets/3ad6604f-3126-439d-b2af-81654da3aa15" />
+<img width="934" height="185" alt="image" src="https://github.com/user-attachments/assets/5a46534b-16ae-4ce6-9dc2-dc66b79645e1" />
+<img width="747" height="526" alt="Screenshot 2026-05-22 205318" src="https://github.com/user-attachments/assets/560f3466-8f3d-440e-99d5-14663ec814f2" />
+<img width="708" height="531" alt="Screenshot 2026-05-22 205330" src="https://github.com/user-attachments/assets/79fed8a3-f9b5-4d12-98ed-16a29b67974c" />
+<img width="387" height="508" alt="Screenshot 2026-05-22 205342" src="https://github.com/user-attachments/assets/fd4fa049-9618-4bee-901f-d87445b77282" />
 <img width="811" height="348" alt="Screenshot 2026-05-22 205751" src="https://github.com/user-attachments/assets/537c246b-edde-4f86-83d6-e00805e2b971" />
 <img width="402" height="527" alt="Screenshot 2026-05-22 205758" src="https://github.com/user-attachments/assets/9a6fbc24-54d9-47b2-b8ce-80b1d780cd2a" />
 <img width="758" height="515" alt="Screenshot 2026-05-22 205809" src="https://github.com/user-attachments/assets/152729a6-f761-4ade-b268-51338792ee11" />
 <img width="830" height="520" alt="Screenshot 2026-05-22 205816" src="https://github.com/user-attachments/assets/34f9e097-a238-4259-9957-fff346c6b1e6" />
 <img width="777" height="525" alt="Screenshot 2026-05-22 205823" src="https://github.com/user-attachments/assets/f7adf885-af6b-4ddf-961d-8c6798253959" />
 
-```
-Loan_data.csv
 
+Loan_data.csv
+'''
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -70,9 +65,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 df = pd.read_csv('Loan_data.csv')
 print(df.head(),"\n")
-```
-<img width="634" height="400" alt="image" src="https://github.com/user-attachments/assets/c66ad58b-9c32-40e7-a1ac-251dcabf36ae" />
-```
+
+
 df.info()
 print()
 
@@ -82,9 +76,8 @@ df.isnull()
 print(df.isnull().sum())
 print()
 
-```
-<img width="581" height="759" alt="image" src="https://github.com/user-attachments/assets/8d5fedd1-4393-4ec0-8a52-8cd531b4aa7a" />
-```
+
+
 df_fill_0 = df.fillna(0)
 print(df_fill_0,"\n")
 
@@ -93,11 +86,8 @@ print(df_ffill,"\n")
 
 df_bfill = df.bfill()
 print(df_bfill,"\n")
-```
-<img width="553" height="566" alt="Screenshot 2026-05-22 211053" src="https://github.com/user-attachments/assets/91d3ecd9-a0cd-4070-9c95-be9cf5e1093a" />
-<img width="598" height="577" alt="Screenshot 2026-05-22 211153" src="https://github.com/user-attachments/assets/44b3075f-4b0e-4bdf-bf2a-c807d96e7ec3" />
-<img width="536" height="572" alt="Screenshot 2026-05-22 211222" src="https://github.com/user-attachments/assets/1194b4da-37ef-4fbe-aac2-a84aa7672fd6" />
-```
+
+
 df['LoanAmount'] = df['LoanAmount'].fillna(df['LoanAmount'].mean())
 print(df,"\n")
 
@@ -107,11 +97,8 @@ print(df_dropna,"\n")
 sns.boxplot(x=df['LoanAmount'])
 plt.show()
 print()
-```
-<img width="534" height="575" alt="Screenshot 2026-05-22 211515" src="https://github.com/user-attachments/assets/746bafe4-2a9a-4390-b123-8d4b8d02039f" />
-<img width="558" height="583" alt="Screenshot 2026-05-22 211522" src="https://github.com/user-attachments/assets/58ab5058-4f3f-4f0a-ae23-a87b9bf88555" />
-<img width="448" height="355" alt="Screenshot 2026-05-22 211532" src="https://github.com/user-attachments/assets/865a46c0-4018-4dcd-857e-c6e4fbd42996" />
-```
+
+
 Q1 = df['LoanAmount'].quantile(0.25)
 Q3 = df['LoanAmount'].quantile(0.75)
 IQR = Q3 - Q1
@@ -139,14 +126,24 @@ print("Outliers:",outliers_z,"\n")
      
 df_z_cleaned = df_z[z_scores <= threshold]
 print(df_z_cleaned,"\n")
+
 ```
+<img width="634" height="400" alt="image" src="https://github.com/user-attachments/assets/c66ad58b-9c32-40e7-a1ac-251dcabf36ae" />
+<img width="581" height="759" alt="image" src="https://github.com/user-attachments/assets/8d5fedd1-4393-4ec0-8a52-8cd531b4aa7a" />
+<img width="553" height="566" alt="Screenshot 2026-05-22 211053" src="https://github.com/user-attachments/assets/91d3ecd9-a0cd-4070-9c95-be9cf5e1093a" />
+<img width="598" height="577" alt="Screenshot 2026-05-22 211153" src="https://github.com/user-attachments/assets/44b3075f-4b0e-4bdf-bf2a-c807d96e7ec3" />
+<img width="536" height="572" alt="Screenshot 2026-05-22 211222" src="https://github.com/user-attachments/assets/1194b4da-37ef-4fbe-aac2-a84aa7672fd6" />
+<img width="534" height="575" alt="Screenshot 2026-05-22 211515" src="https://github.com/user-attachments/assets/746bafe4-2a9a-4390-b123-8d4b8d02039f" />
+<img width="558" height="583" alt="Screenshot 2026-05-22 211522" src="https://github.com/user-attachments/assets/58ab5058-4f3f-4f0a-ae23-a87b9bf88555" />
+<img width="448" height="355" alt="Screenshot 2026-05-22 211532" src="https://github.com/user-attachments/assets/865a46c0-4018-4dcd-857e-c6e4fbd42996" />
 <img width="514" height="114" alt="Screenshot 2026-05-22 211810" src="https://github.com/user-attachments/assets/5d07b79d-b2f7-4c26-9073-ee93cec8b361" />
 <img width="635" height="914" alt="Screenshot 2026-05-22 211857" src="https://github.com/user-attachments/assets/c8b650a1-ba01-429d-9bd0-114c626f88b0" />
 <img width="567" height="618" alt="Screenshot 2026-05-22 211929" src="https://github.com/user-attachments/assets/45b9fe38-4bf2-4f2d-a728-8eda528cf5f3" />
 <img width="353" height="479" alt="Screenshot 2026-05-22 212104" src="https://github.com/user-attachments/assets/faf54500-41e2-4c4e-8546-1275a5ce0acc" />
 
-```
+
 Data_set.csv
+```
 
 
 import pandas as pd
@@ -238,9 +235,9 @@ print(df_z_cleaned,"\n")
 <img width="631" height="655" alt="Screenshot 2026-05-22 212932" src="https://github.com/user-attachments/assets/9e5b1545-59d5-4516-b587-90011dc6e2eb" />
 <img width="404" height="450" alt="Screenshot 2026-05-22 212956" src="https://github.com/user-attachments/assets/66ae7854-f3a0-4b12-9114-7a7d0d6dcf71" />
 
-```
-heights.csv
 
+heights.csv
+```
 
 import pandas as pd
 import numpy as np
@@ -318,9 +315,9 @@ print(df_z_cleaned,"\n")
 <img width="298" height="267" alt="Screenshot 2026-05-22 214102" src="https://github.com/user-attachments/assets/0be20b9b-21ed-4bbe-bbc2-20fc5e4ddeab" />
 <img width="364" height="769" alt="Screenshot 2026-05-22 214140" src="https://github.com/user-attachments/assets/0b9dffed-959f-442c-8400-43d537e6712b" />
 
-```
-iris.csv
 
+iris.csv
+```
 
 import pandas as pd
 import numpy as np
